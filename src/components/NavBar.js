@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Route, withRouter } from "react-router-dom";
-import { removeUser, removeAccount } from "../actions/usersAction";
+import { removeUser, removeAccount, removeCustomers } from "../actions/usersAction";
 import { useDispatch } from "react-redux";
 import swal from "sweetalert";
 import Home from "./Home";
@@ -13,6 +13,7 @@ const NavBar = (props) => {
 
   const dispatchUser = useDispatch();
   const dispatchAccount = useDispatch();
+  const dispatchCustomer = useDispatch()
 
   const { userLoggedIn, handleAuth } = props;
 
@@ -46,10 +47,11 @@ const NavBar = (props) => {
                   if (isLoggedOut) {
                     localStorage.removeItem("token");
 
-                    // reseting regUser, userAccount
+                    // resetting regUser, userAccount
 
                     dispatchUser(removeUser());
                     dispatchAccount(removeAccount());
+                    dispatchCustomer(removeCustomers())
                     swal("successfully logged out", {
                       icon: "success",
                     });

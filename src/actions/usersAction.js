@@ -16,7 +16,6 @@ export const startRegisterUser = (formData, onSuccess) => {
           swal({ title: "Successfully created an account", icon: "success" });
           console.log("regUser", result);
           dispatch(registerUser(result));
-
           onSuccess();
         }
       })
@@ -118,3 +117,9 @@ export const getCustomers = (customers) => {
     payload : customers
   }
 }
+
+export const removeCustomers = () => {
+  return {
+    type: "REMOVE_CUSTOMERS",
+  };
+};

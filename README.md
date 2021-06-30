@@ -16,6 +16,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 - React.js
 - React-Redux
 - Bootstrap
+- Axios
 
 ## Features<a name="features"></a>
 
@@ -24,3 +25,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
   - Sign in
   - Track Customers info
   - Sign out
+
+## Trial Data API
+
+https://jsonplaceholder.typicode.com/users

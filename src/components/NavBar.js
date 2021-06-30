@@ -19,10 +19,10 @@ const NavBar = (props) => {
   return (
     <div>
       <p>
-        <span>
+        {/* <span>
           <Link to="/">Home</Link>
         </span>{" "}
-        |
+        | */}
         {userLoggedIn ? (
           <>
             <span>
@@ -75,7 +75,7 @@ const NavBar = (props) => {
         )}
       </p>
 
-      <Route path="/" component={Home} exact={true} />
+      {/* <Route path="/" component={Home} exact={true} /> */}
       <Route path="/register" component={Register} />
       <Route
         path="/login"

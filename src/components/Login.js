@@ -77,13 +77,11 @@ const Login = (props) => {
           onChange={handleChange}
           name="email"
         />
-
+        <br />
         {formErrors.email && (
           <span className="text-danger"> {formErrors.email} </span>
         )}
-
         <br />
-
         <input
           type="password"
           style={{ marginBottom: "10px" }}
@@ -92,7 +90,7 @@ const Login = (props) => {
           onChange={handleChange}
           name="password"
         />
-
+        <br />
         {formErrors.password && (
           <span className="text-danger"> {formErrors.password} </span>
         )}
